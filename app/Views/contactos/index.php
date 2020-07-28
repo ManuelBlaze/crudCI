@@ -23,9 +23,9 @@
                       <a href="/edit" class="btn btn-info">
                           <i class="fas fa-pen"></i>
                       </a>
-                      <button data-id="<?php echo $contacto["id"] ?>" type="button" class="btn-borrar btn btn-danger">
+                      <a href="delete/delete/<?=$contacto["id"]?>" data-id="<?php echo $contacto["id"] ?>" class="btn-borrar btn btn-danger">
                         <i class="fas fa-trash"></i>
-                      </button>
+                      </a>
                   </div>
               </td>
               <td><?=$contacto['nombre']?></td>
