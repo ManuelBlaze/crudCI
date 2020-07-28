@@ -13,53 +13,29 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
-          <div class="text-center">
-              <a href="#" class="btn btn-info">
-                  <i class="fas fa-pen"></i>
-              </a>
-              <a href="#" class="btn btn-danger">
-                  <i class="fas fa-trash"></i>
-              </a>
-          </div>
-      </td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>
-          <div class="text-center">
-
-              <a href="#" class="btn btn-info">
-                  <i class="fas fa-pen"></i>
-              </a>
-              <a href="#" class="btn btn-danger">
-                  <i class="fas fa-trash"></i>
-              </a>
-          </div>
-      </td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>
-          <div class="text-center">
-
-              <a href="#" class="btn btn-info">
-                  <i class="fas fa-pen"></i>
-              </a>
-              <a href="#" class="btn btn-danger">
-                  <i class="fas fa-trash"></i>
-              </a>
-          </div>
-      </td>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php 
+      if(isset($contactos)) {
+        foreach ($contactos as $contacto) {
+          ?>
+            <tr>
+              <td>
+                  <div class="text-center">
+                      <a href="#" class="btn btn-info">
+                          <i class="fas fa-pen"></i>
+                      </a>
+                      <button data-id="<?php echo $contacto["id"] ?>" type="button" class="btn-borrar btn btn-danger">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                  </div>
+              </td>
+              <td><?=$contacto['nombre']?></td>
+              <td><?=$contacto['empresa']?></td>
+              <td><?=$contacto['telefono']?></td>
+            </tr>
+          <?php
+        }
+      }
+    ?>   
   </tbody>
 </table>
 </div>
