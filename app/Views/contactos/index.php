@@ -20,7 +20,7 @@
             <tr>
               <td>
                   <div class="text-center">
-                      <a href="#" class="btn btn-info">
+                      <a href="/edit" class="btn btn-info">
                           <i class="fas fa-pen"></i>
                       </a>
                       <button data-id="<?php echo $contacto["id"] ?>" type="button" class="btn-borrar btn btn-danger">
