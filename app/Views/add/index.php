@@ -3,24 +3,26 @@
   <div class="card-header">Agregar Contacto</div>
   <div class="card-body">
     <h4 class="card-title">Agregue un nuevo contacto llenando el formulario</h4>
-        <form>
+        <?= \Config\Services::validation()->listErrors(); ?>
+        <form method="post" enctype="multipart/form-data" id=form action="add/new" >
+          <?= csrf_field() ?>
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre">
-                
+                <input type="text" name="nombre" class="form-control" id="nombre" required>
+
             </div>
             <div class="form-group">
                 <label for="empresa">Empresa</label>
-                <input type="text" class="form-control" id="empresa">
-                
+                <input type="text" name="empresa" class="form-control" id="empresa" required>
+
             </div>
             <div class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="number" class="form-control" id="telefono">
-                
+                <input type="number" name="telefono" class="form-control" id="telefono" required>
+
             </div>
-            
-            <button type="submit" class="btn btn-outline-success mr-2">Agregar</button>
+
+            <input name="submitform" type="submit" id="submit" class="btn btn-outline-success mr-2" value="Agregar">
             <a href="/contactos" class="btn btn-outline-danger">Cancelar</a>
         </form>
   </div>
