@@ -20,7 +20,7 @@
             <tr>
               <td>
                   <div class="text-center">
-                      <a href="/edit" class="btn btn-info">
+                      <a href="/edit/index/<?=$contacto["id"]?>" class="btn btn-info">
                           <i class="fas fa-pen"></i>
                       </a>
                       <a href="delete/delete/<?=$contacto["id"]?>" data-id="<?php echo $contacto["id"] ?>" class="btn-borrar btn btn-danger">
